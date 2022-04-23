@@ -1,4 +1,5 @@
 # use Ganache's forked mainnet mode as the default network
+dotenv: .env
 networks:
   default: mainnet-fork
 
@@ -8,11 +9,13 @@ autofetch_sources: True
 # require OpenZepplin Contracts v3.0.0
 dependencies:
   - OpenZeppelin/openzeppelin-contracts@3.0.0
-
+  - Uniswap/v3-periphery@1.3.0
 # path remapping to support OpenZepplin imports with NPM-style path
 compiler:
   solc:
     remappings:
+      - "@uniswap=Uniswap/v3-periphery@1.3.0"
+# path remapping to support OpenZepplin imports with NPM-style path
       - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@3.0.0"
 networks:
   default: mainnet-fork

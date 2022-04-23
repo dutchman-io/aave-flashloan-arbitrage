@@ -1,3 +1,4 @@
+//SPDX-License-Idenrfier:MIT
 pragma solidity ^0.6.6;
 
 import "./aave/FlashLoanReceiverBaseV2.sol";
